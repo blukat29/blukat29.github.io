@@ -29,3 +29,6 @@ pre {
     width: 15rem;
   }
 }
+img {
+  border-radius: 0;
+}
