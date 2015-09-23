@@ -3,22 +3,17 @@ markdown:         redcarpet
 highlighter:      true
 
 # Permalinks
-permalink:        pretty
+permalink:        /:year/:month/:title/
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
+title:            blukat29
+tagline:          'blog'
+description:      'blog.'
+url:              http://blukat29.github.io
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'blukat29'
+  url:            https://github.com/blukat29
 
-paginate:         5
+paginate:         1
 
-# Custom vars
-version:          2.0.0
-
-github:
-  repo:           https://github.com/poole/hyde
