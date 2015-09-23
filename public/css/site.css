@@ -1,0 +1,20 @@
+.post,
+.post p {
+  font-size: 0.8rem;
+  font-family: 'Nanum Gothic','맑은 고딕','Malgun Gothic','돋움',dotum,sans-serif;
+}
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+code {
+  padding: 0.2rem;
+}
+pre {
+  line-height: 1.2;
+  padding: 0.8rem;
+  font-size: 0.7rem;
+}
+.sidebar-title {
+  color: white;
+}
