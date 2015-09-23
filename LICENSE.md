@@ -1,4 +1,4 @@
-# Released under MIT License
+# Hyde Theme
 
 Copyright (c) 2013 Mark Otto.
 
