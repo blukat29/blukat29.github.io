@@ -1,6 +1,5 @@
 # Dependencies
 markdown:         redcarpet
-highlighter:      true
 
 # Permalinks
 permalink:        /:year/:month/:title/
