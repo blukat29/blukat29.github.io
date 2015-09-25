@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CSAW CTF 2015 - pcapin
+category: writeup
 ---
 pcapin은 네트워크 포렌식 문제다.
 

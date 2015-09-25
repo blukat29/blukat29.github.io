@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CSAW CTF 2015 - Sharpturn
+category: writeup
 ---
 {% highlight text %}
 I think my SATA controller is dying.

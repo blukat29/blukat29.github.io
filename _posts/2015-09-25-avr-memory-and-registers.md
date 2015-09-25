@@ -1,6 +1,7 @@
 ---
 layout: post
 title: AVR Memory and Registers
+category: AVR
 ---
 
 AVR은 Atmel사에서 개발한 8비트 RISC 마이크로프로세서다. x86이나 ARM에 비해 특이한 점들이 많아서 따로 정리한다.
@@ -19,24 +20,24 @@ Flash memory와 SRAM은 둘 다 0부터 시작하는 16비트 address space를 �
 
 ### 2. 레지스터
 
-AVR에는 총 32개의 general purpose 레지스터가 있다. AVR에서는 레지스터가 memory-map되어 있어서 r0~r31는 메모리 0x00~0x1f에 위치한다. 
+AVR에는 총 32개의 general purpose 레지스터가 있다. AVR에서는 레지스터가 memory-map되어 있어서 r0~r31는 메모리 0x00~0x1f에 위치한다.
 
 - r27:r26을 붙이면 (r27이 high byte) X라는 16비트 레지스터가 된다.
 - r29:r28은 Y인데, ebp처럼 stack frame pointer로 쓰인다.
 - r31:r30은 Z라고도 부르는데, 프로그램 메모리를 읽어올 때 쓰인다.
-- r1의 값은 항상 0이다. 
+- r1의 값은 항상 0이다.
 - 함수의 argument는 순서대로 r25:r24, r23:r22, r21:r20, ... 을 통해 전달한다.
 - 함수의 return value는 r25:r24에 저장한다.
 
 AVR에는 SREG와 SP라는 special purpose 레지스터도 있다.
 
 - SREG(Status Register)는 x86의 FLAGS와 비슷하게 sign flag, overflow flag, zero flag 등을 담고 있으며 연산을 할 때마다 자동으로 바뀐다.
-- SP(Stack Pointer)는 x86의 esp와 같은 역할이다. 
+- SP(Stack Pointer)는 x86의 esp와 같은 역할이다.
 - SREG는 0x3F에, SP는 SPH:SPL이 0x3E:0x3D에 해당한다.
 
 ### 3. SRAM
 
-AVR의 SRAM은 데이터를 읽고 쓰는 것 외에 레지스터 접근, memory-mapped I/O 등의 다양한 용도로 쓰인다. 
+AVR의 SRAM은 데이터를 읽고 쓰는 것 외에 레지스터 접근, memory-mapped I/O 등의 다양한 용도로 쓰인다.
 
 - 0x00 ~ 0x1f: Registers r0 ~ r31
 - 0x20 ~ 0x5f: I/O (SREG, SPL, SPH, ...)

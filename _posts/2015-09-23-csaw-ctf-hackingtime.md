@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CSAW CTF 2015 - HackingTime
+category: writeup
 ---
 HackingTime은 NES 리버싱 문제이다. NES파일은 이번 대회에서 처음 다뤄보는지라 조금 헤맸다. NES, 또는 iNES ROM은 [닌텐도 패미컴](https://ko.wikipedia.org/wiki/%ED%8C%A8%EB%B0%80%EB%A6%AC_%EC%BB%B4%ED%93%A8%ED%84%B0)용 프로그램이다.
 

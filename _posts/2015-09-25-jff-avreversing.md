@@ -1,6 +1,7 @@
 ---
 layout: post
 title: JFF 3 - AVReversing
+category: writeup
 ---
 
 AVReversing은 LeaveRet에서 주관한 제 3회 Just For Fun CTF 2015에 나온 AVR 리버싱 문제다.

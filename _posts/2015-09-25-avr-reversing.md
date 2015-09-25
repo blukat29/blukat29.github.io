@@ -1,6 +1,7 @@
 ---
 layout: post
 title: AVR Reversing
+category: AVR
 ---
 
 AVR instruction set은 공식 문서에 잘 나와 있으므로 아래를 참고하면 된다. 각각의 인스트럭션은 이 글에서 설명하지 않겠다.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Blogging in Github
+category: Uncategorized
 ---
 
 몇달 전에 Jekyll로 Github에 블로그를 파보려고 한 적이 있었다. 그때가 내가 한창 웹 언어와 bootstrap을 배워서 가지고 놀던 때였고, 그래서인지 [Jekyll-bootstrap](http://jekyllbootstrap.com/)을 fork해서 첫 포스트를 썼었다. 웹사이트에는 "Host on Github in 3 minutes"라고 되어 있었지만 gem이니 rake니 하는 커맨드가 좀 낯설어서 꽤나 오래 걸렸다. 게다가 그 결과도 썩 마음에 들지 않았다. 결국 포스트를 2개 쓰고 방치해 두었다.
