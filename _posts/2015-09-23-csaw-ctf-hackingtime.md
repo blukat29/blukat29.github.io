@@ -12,7 +12,7 @@ NES 에뮬레이터는 종류가 많은데, 간단히 실행만 하려면 Virtua
 
 NES는 Motorola 6502를 개조한 8비트 프로세서 기반이다. 주로 사용하는 레지스터는 A,X,Y 세 개이고 각각 8비트씩이다. 몇 가지 어셈블리를 소개하고 넘어가겠다.
 
-{% highlight text %}
+```
 LDA #$12      # Load constant 0x12 to A
 STA 0x39      # Store A to memory address 0x39
 TXA           # Transfer X to A
@@ -20,7 +20,7 @@ JSR sub_8233  # Call function at 0x8233
 LDA 3, Y      # Load byte at (Y+3) to A
 CPY #24       # Compare Y against const 24
 BNE lab_8102  # Branch if not equal
-{% endhighlight %}
+```
 
 아래 사이트가 아주 유용했다.
 
@@ -39,7 +39,7 @@ BNE lab_8102  # Branch if not equal
 
 화면에 나온 `"LOCKDOWN"`은 0x958E에 있다. 그러나 레지스터가 8비트 밖에 표현하지 못하므로 0x958E가 코드 상에 그대로 나타나지는 않을 것이다. 그래서 0x8E, 즉 `#$8E`를 검색했다. 그렇게 해서 비밀번호 루틴인 sub_805A를 찾았다.
 
-{% highlight text %}
+```text
 ROM:8086      LDA     #$8E
 ROM:8088      STA     byte_39
 ROM:808A      LDA     #$95
@@ -55,7 +55,7 @@ ROM:809E      STA     byte_3A
 ROM:80A0      LDX     #6
 ROM:80A2      LDY     #5
 ROM:80A4      JSR     print    ; 0x9599 "ENTER THE PASSWORD" at 6,5
-{% endhighlight %}
+```
 
 코드를 보면 문자열의 주소를 메모리 0x39:0x3A에 넣고 레지스터 X, Y에는 문자열을 출력할 좌표값을 넣은 뒤 print(sub_8422)를 호출하면 문자열이 출력되는 것 같다.
 
@@ -75,7 +75,7 @@ Graph overview를 보니 전형적인 switch-case 구조다. flow가 갈라지�
 
 실제 비밀번호를 체크하는 부분은 0x82F1이다. 이 함수는 0x955E와 0x9576에 있는 각 24바이트짜리 테이블을 사용하고 ROL, ROR, XOR등으로 이루어져 있다. 아래는 키젠 스크립트이다.
 
-{% highlight python %}
+```py
 u = """
 $70, $30, $53, $A1, $D3, $70, $3F, $64, $B3, $16
 $E4, 4, $5F, $3A, $EE, $42, $B1, $A1, $37, $15, $6E
@@ -113,7 +113,7 @@ for i in range(24):
             x[i] = c
             break
 print ''.join(map(chr, x))
-{% endhighlight %}
+```
 
 답은 NOHACK4UXWRATHOFKFUHRERX 이다.
 

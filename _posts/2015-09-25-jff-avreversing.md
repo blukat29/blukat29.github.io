@@ -20,7 +20,7 @@ strcpy, memcpy, memcmp 등은 함수가 작아서 코드를 보면 알 수 있�
 
 프로그램의 대략적인 구조는 다음과 같다. 코드에서 r25:r24는 w24, r23:r22는 w22... 등으로 표시했다.
 
-{% highlight c %}
+```c
 void main_FE() {
     // (setup some global variables)
     // (initialize UART console)
@@ -78,11 +78,11 @@ void check_8A(char* input) {  // input given through w24, stored at w14
 
   r24 = memcmp(table, buf, w20);
 }
-{% endhighlight %}
+```
 
 ### 2. keygen
 
-{% highlight py %}
+```py
 target = """
 27 F6 76 D6 05 13 A4 85  D3 D7 B6 F7 96 25 74 A3
 F4 36 75 54 15 76 56 E7  67 02
@@ -99,7 +99,7 @@ for i in range(0x1A):
     a[i] = swap(a[i]) ^ i
 
 print ''.join(map(chr, a))
-{% endhighlight %}
+```
 
 정답은 `rnenT4L_5tate_I5_rEVErsin9` 이다.
 

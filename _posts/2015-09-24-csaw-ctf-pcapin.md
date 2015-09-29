@@ -20,7 +20,7 @@ pcapin은 네트워크 포렌식 문제다.
 
 Wireshark에서 `tcp.len > 0`으로 필터링하면 데이터가 있는 패킷만 볼 수 있다. 아래는 TCP가 전달한 데이터를 순서대로 이은 뒤 한 단위로 보이는 부분으로 자른 것이다.
 
-{% highlight text %}
+```
 - Client -> Server:
 0008 0000 0731 f9e9
 
@@ -36,13 +36,13 @@ Wireshark에서 `tcp.len > 0`으로 필터링하면 데이터가 있는 패킷�
 
 - Client -> Server:
 003a 0000 1502 f9e9 8f95889ec789879ee9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9e9f9
-{% endhighlight %}
+```
 
 문제에서 file transfer protocol 이랬으니까 FTP처럼 첫 부분이 LIST요청, 두 번째 부분이 파일 목록을 담은 응답, 세 번째 부분이 파일 다운로드 요청일 것이라 추정할 수 있다. 실제로 패킷 길이도 그런 것 같이 생겼다. 또, 크게 중요하진 않지만 첫 두 바이트가 패킷의 전체 길이이고, 서버의 응답 맨 끝에는 'END'(454e44)가 붙는다는 점을 알 수 있다.
 
 서버의 파일 목록 응답을 보면 뒤쪽에 e9f9가 엄청 많이 붙어있고, 각 줄의 길이가 모두 같다. e9f9는 아마 길이를 맞추기 위한 null byte일 것이다. 또, 데이터에 적용된 암호화는, 문제에서 어려운 암호는 쓰지 않았다고 했으니 단순한 xor 암호를 의심해볼 수 있다. 각 줄을 0xe9f9로 xor해보면 다음과 같은 문자열을 얻는다. 클라이언트가 요청한 파일 이름도 마찬가지로 e9f9로 xor해보면 `flag.png`임을 알 수 있다.
 
-{% highlight text %}
+```
 document.pdf
 sample.tif
 outfile.dat
@@ -51,14 +51,14 @@ flag.png
 resume.pdf
 god.pcapng
 malware.exe
-{% endhighlight %}
+```
 
 
 ## 2. 그림 추출하기
 
 답은 서버가 보내준 `flag.png`에 들어있을 것이다. 아래는 pcap파일의 나머지 부분인데, 서버가 보낸 파일의 데이터이다. 너무 길어서 일부 줄였다.
 
-{% highlight text %}
+```
 00d4 4567 0732001c 0000 0000 d96f1e785d354a35...
 00d4 23c6 0732001c 0001 0000 b5182f3f85f716fa...
 00d4 9869 0732001c 0002 0000 6b0ba95b9bfe6de4...
@@ -87,7 +87,7 @@ malware.exe
 00d4 255a 0732001c 0019 0000 00e697c2feb99eb0...
 00d4 f92e 0732001c 001a 0000 8e0ec83fcb06fc0a...
 00d4 7263 0732001c 001b 0000 a0b58efa2a93939d...(skipped)...4c6c4c6c4c6c4c6c4c6c4c6c454e44
-{% endhighlight %}
+```
 
 중간에 00부터 1b까지 sequence number 처럼 보이는 부분이 있어서 우리가 패킷을 빠트리지 않았다는 것을 증명해준다. 또, 이제까지는 0000이었던 3~4번째 바이트가 줄 마다 다른 데이터로 차 있다.
 

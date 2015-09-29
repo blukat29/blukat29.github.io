@@ -3,15 +3,14 @@ layout: post
 title: CSAW CTF 2015 - Sharpturn
 category: writeup
 ---
-{% highlight text %}
-I think my SATA controller is dying.
-{% endhighlight %}
+
+> I think my SATA controller is dying.
 
 Sharpturn은 400점짜리 포렌식 문제다. `sharpturn.tar.xz`파일이 주어졌는데, 이런 파일이 들어있었다.
 
-{% highlight text %}
+```
 HEAD  branches/  config  description  hooks/  info/  objects/  refs/
-{% endhighlight %}
+```
 
 Git 저장소의 `.git/` 디렉토리임을 대번에 알 수 있었다.
 
@@ -19,8 +18,7 @@ Git 저장소의 `.git/` 디렉토리임을 대번에 알 수 있었다.
 
 커밋 로그로부터 원본 파일을 복구하는 건 전혀 어렵지 않다. 여러 가지 방법이 있는데, 나는 local repository를 clone하는 방법을 써서 `Makefile`과 `sharp.cpp`, 두 파일을 얻었다. `sharp.cpp`는 이렇게 생겼다.
 
-{% highlight cpp %}
-{% raw %}
+```cpp
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -120,16 +118,15 @@ int main(int argc, char **argv)
 
         return 0;
 }
-{% endraw %}
-{% endhighlight %}
+```
 
-일단 코드에 오타가 있어서 조금 고쳐서 컴파일 해야 한다. 그리고 또 하나 이상한 점이 있는데, 270031727027의 소인수가 네 개라는 점이다. 그래서 프로그램이 하라는 대로 입력을 넣고, 마지막 part5에 소인수 네 개중 두 개를 골라 넣어도 그렇게 나온 flag는 정답이 아니다.
+일단 코드에 오타가 있어서 조금 고쳐서 컴파일 해야 한다. 게다가 270031727027의 소인수가 네 개라서 어느 두 소수를 말하는 건지 알 수도 없었다. 그래서 프로그램이 하라는 대로 입력을 넣고, 마지막 part5에 소인수 네 개중 두 개를 골라 넣어도 그렇게 나온 flag는 정답이 아니다.
 
 ## 2. 진짜 파일 복구하기
 
-문제에서 SATA 컨트롤러에 문제가 있다고 하니 파일이 손상되었을 가능성을 생각해 보아야 한다. 관련 키워드로 인터넷을 뒤져보니 `git fsck`를 돌려보란다. 이 커맨드는 나중에 문제 힌트로도 주어졌다.
+문제에서 SATA 컨트롤러에 문제가 있다고 하니 파일이 손상되었을 가능성을 생각해 보아야 한다. 관련 키워드로 인터넷을 뒤져보니 `git fsck`를 돌려보란다.
 
-{% highlight text %}
+```text
 $ git fsck
 Checking object directories: 100% (256/256), done.
 error: sha1 mismatch 354ebf392533dce06174f9c8c093036c138935f3
@@ -141,13 +138,13 @@ error: f8d0839dd728cb9a723e32058dcc386070d5e3b5: object corrupt or missing
 missing blob 354ebf392533dce06174f9c8c093036c138935f3
 missing blob f8d0839dd728cb9a723e32058dcc386070d5e3b5
 missing blob d961f81a588fcfd5e57bbea7e17ddae8a5e61333
-{% endhighlight %}
+```
 
 문제로 주어진 저장소에는 `sharp.cpp`가 총 네 가지 버전이 있는데, sha1 에러가 난 세 object는 각각 `sharp.cpp`의 두번째, 세번째, 네번째 버전이다.
 두 번째 버전(`354ebf392533dce06174f9c8c093036c138935f3`)은 다음과 같다.
 
-{% highlight cpp %}
-blob 520#include <iostream>
+```cpp
+#include <iostream>
 #include <string>
 #include <algorithm>
 
@@ -175,15 +172,14 @@ int main(int argc, char **argv)
 
         return 0;
 }
-{% endhighlight %}
+```
 
 이 파일에 문제가 있어서 sha1 해시가 다르다는 건데, 틀릴 만한 부분은 숫자밖에 없다고 가정하고 sha1을 맞추려고 해보았다.
 그 결과 '51337'을 '31337'로 고치면 sha1해시가 맞게 된다는 것을 알아냈다.
 
 세 번째 버전(`d961f81a588fcfd5e57bbea7e17ddae8a5e61333`)은 두 번째 버전에 다음 부분이 추가된 버전이다.
 
-{% highlight text %}
-
+```text
 +     uint64_t first, second;
 +     cout << "Part5: Input the two prime factors of the number 270031727027." << endl;
 +     cin >> first;
@@ -201,13 +197,13 @@ int main(int argc, char **argv)
 +             factor2 = first;
 +     }
 
-{% endhighlight %}
+```
 
 일단, 내용을 바꿔가며 sha1을 계산하기 전에 이때 파일의 앞부분에 있는 51337을 31337로 바꿔야 한다. 여기서 틀릴 만한 부분은 저 문제의 270031727027일 것이다. 그러나 모든 숫자를 테스트 하기엔 너무 숫자가 크다. 그래서 숫자 하나만 바뀌었다고 가정하고 숫자를 바꿔가며 sha1을 계산해보았다.
-그 결과 저 숫자를 272031727027로 바꿔야 한다는 결론이 나왔다. 272031727027은 31357 * 8675311이기 때문에 앞뒤가 잘 맞아 떨어졌다.
+그 결과 저 숫자를 272031727027로 바꿔야 한다는 결론이 나왔다. 272031727027은 31357 * 8675311이기 때문에 맞는 것 같았다.
 
 이렇게 두 숫자를 고치고 컴파일 한 뒤 다음과 같은 입력을 주면 올바른 flag를 출력한다.
-{% highlight text %}
+```text
 $ ./sharp
 flag
 31337
@@ -215,10 +211,10 @@ asdf
 money
 31357 8675311
 flag{3b532e0a187006879d262141e16fa5f05f2e6752}
-{% endhighlight %}
+```
 
 아래는 sha1을 맞출 때 사용한 스크립트이다.
-{% highlight python %}
+```py
 #!/usr/bin/env python
 import itertools
 import hashlib
@@ -267,5 +263,5 @@ if __name__ == '__main__':
     s = zlib.decompress(f.read())
     f.close()
     brute_number2(s)
-{% endhighlight %}
+```
 
