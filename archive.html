@@ -1,0 +1,16 @@
+---
+layout: page
+title: Archive
+---
+
+{% for post in site.posts %}
+<p>
+<div><small>
+    {{ post.date | date_to_string }}
+    &bullet;
+    <a href="/category.html#{{ post.category | downcase }}">{{ post.category }}</a>
+</small></div>
+<div><a href="{{ post.url }}">{{ post.title }}</a></div>
+</p>
+{% endfor %}
+
