@@ -4,13 +4,13 @@ title: Archive
 ---
 
 {% for post in site.posts %}
-<p>
-<div><small>
-    {{ post.date | date_to_string }}
-    &bullet;
-    <a href="/category.html#{{ post.category | downcase }}">{{ post.category }}</a>
-</small></div>
-<div><a href="{{ post.url }}">{{ post.title }}</a></div>
-</p>
+<div>
+  <small class="archive-category">
+    <a href="/category.html#{{ post.category | downcase }}">{{ post.category | downcase }}</a>
+  </small>
+  <a href="{{ post.url }}">{{ post.title }}</a>
+  <small class="archive-date">{{ post.date | date_to_string }}</small>
+  <hr class="archive-hr"></hr>
+</div>
 {% endfor %}
 

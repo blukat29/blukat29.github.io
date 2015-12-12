@@ -47,3 +47,13 @@ img {
 .post-category {
   font-size: 0.8rem;
 }
+hr.archive-hr {
+  margin: 0.2em;
+}
+.archive-category {
+  float: left;
+  width: 8em;
+}
+.archive-date {
+  float: right;
+}
