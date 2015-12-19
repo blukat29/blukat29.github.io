@@ -1,6 +1,8 @@
+html {
+  font-family: 'PT Sans',Helvetica,Arial,sans-serif;
+}
 .post {
-  font-size: 14px;
-  font-family: 'Nanum Gothic','맑은 고딕','Malgun Gothic','돋움',dotum,sans-serif;
+  font-size: 16px;
 }
 .post h2 {
   margin-top: 1.5rem;
@@ -8,7 +10,7 @@
 }
 h1 { font-size: 28px; }
 h2 { font-size: 24px; }
-h3 { font-size: 18px; }
+h3 { font-size: 20px; }
 .lead { font-size: 1.0rem; }
 code {
   padding: 0.2rem;
