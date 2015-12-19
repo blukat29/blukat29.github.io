@@ -59,3 +59,11 @@ hr.archive-hr {
 .archive-date {
   float: right;
 }
+
+.theme-base-10 .sidebar {
+  background-color: #34495e;
+}
+.theme-base-10 .content a,
+.theme-base-10 .related-posts li a:hover {
+  color: #2980b9;
+}
