@@ -49,7 +49,7 @@ img {
 .post-category {
   font-size: 0.8rem;
 }
-hr.archive-hr {
+hr {
   margin: 0.2em;
 }
 .archive-category {
@@ -67,3 +67,24 @@ hr.archive-hr {
 .theme-base-10 .related-posts li a:hover {
   color: #2980b9;
 }
+
+.article-box {
+  margin-top: 3em;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  border: 1px solid #ddd;
+}
+h4.article-box-top {
+  margin-top: 10px;
+  color: #888;
+}
+.article-link {
+  color: #888 !important;
+}
+.article-date {
+  float: right;
+  color: #888;
+}
+
+
