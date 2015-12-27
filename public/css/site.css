@@ -28,7 +28,7 @@ pre {
 }
 @media (min-width: 48rem) {
   .sidebar {
-    width: 15rem;
+    width: 14rem;
   }
 }
 
@@ -87,4 +87,11 @@ h4.article-box-top {
   color: #888;
 }
 
+.sidebar-nav-item.active {
+  text-decoration: underline;
+}
+.sidebar-category-item a {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,.7);
+}
 
