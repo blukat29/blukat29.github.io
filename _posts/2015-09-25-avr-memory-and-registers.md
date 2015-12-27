@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AVR Memory and Registers
-category: AVR
+category: reversing
 ---
 
 AVR은 Atmel사에서 개발한 8비트 RISC 마이크로프로세서다. x86이나 ARM에 비해 특이한 점들이 많아서 따로 정리한다.

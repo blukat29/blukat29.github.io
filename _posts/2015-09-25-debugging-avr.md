@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Debugging AVR
-category: AVR
+category: reversing
 ---
 
 

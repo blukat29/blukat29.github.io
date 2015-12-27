@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C# decompilers
-category: .net
+category: reversing
 ---
 
 개인적으로 ILSpy를 추천.

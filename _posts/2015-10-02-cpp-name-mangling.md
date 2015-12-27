@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C++ Name Mangling
-category: cpp
+category: reversing
 ---
 
 C++은 함수 오버라이딩, 함수 오버로딩, 연산자 오버로딩, 템플릿 등 복잡한 기능이 있는 언어이다. 그래서 C++의 함수나 타입은 `std::allocator<char>::allocator()`처럼 특수문자가 들어간 복잡한 이름을 가질 수가 있다.
@@ -41,4 +41,3 @@ std::allocator<char>::allocator()(0x7ffd5905a580, 0x7ffd5905a698, 0x7ffd5905a6a8
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)(0x7ffd5905a530, 0x406d72, 0x7ffd5905a580, 6) = 0x660028
 ```
 
-하지만 이름을 고쳐도 알아보기 힘든 건 마찬가지다.
