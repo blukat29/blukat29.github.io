@@ -3,16 +3,35 @@ layout: page
 title: Category
 ---
 
-{% for category in site.categories %}
-  <h2><a name="{{ category | first }}"></a>{{ category | first }}</h2>
-  <ul>
-  {% for posts in category %}
-    {% for post in posts %}
-      {% if post.content != "" %}
-        <div><a href="{{ post.url }}">{{ post.title }}</a></div>
-      {% endif %}
+<div class="category">
+  {% for category in site.categories %}
+  <div class="category-block" id="{{ category | first }}">
+    <h2>
+      {{ category | first }}
+      <small>({{ category | last | size }})</small>
+    </h2>
+    {% for posts in category %}
+      {% for post in posts %}
+        {% if post.url %}
+        <div>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <span class="article-date">{{ post.date | date_to_string }}</span>
+        </div>
+        {% endif %}
+      {% endfor %}
     {% endfor %}
+  </div>
   {% endfor %}
-  </ul>
-{% endfor %}
+</div>
+
+<script>
+(function() {
+  function hlblock() {
+    $(".category-block").removeClass("active");
+    $(location.hash).addClass("active");
+  }
+  $(window).on("hashchange", hlblock);
+  $(document).ready(hlblock);
+}());
+</script>
 
