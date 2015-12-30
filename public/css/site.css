@@ -1,5 +1,8 @@
 html {
-  font-family: 'PT Sans',Helvetica,Arial,sans-serif;
+  font-family: 'PT Sans','Calibri',Helvetica,Arial,sans-serif;
+}
+code, pre {
+  font-family: Menlo, Monaco, Consolas, monospace;
 }
 .post {
   font-size: 16px;
