@@ -48,3 +48,7 @@ N
 
 Combining the output of each binary, we have the flag `SECCON{AaABiN1234567890abcdefBDFHJLNPAW3a5d37a38a0d28faAq}`.
 
+## 5. Docker image
+
+I've compiled a Docker image that contains binutils and gdb for various architectures and uploaded at DockerHub. <https://hub.docker.com/r/blukat29/cross/>
+
