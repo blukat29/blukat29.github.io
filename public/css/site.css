@@ -107,3 +107,7 @@ h4.article-box-top {
 .category-block.active {
   background-color: #eee;
 }
+
+.comment-box {
+  margin-top: 3em;
+}
