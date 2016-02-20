@@ -22,10 +22,10 @@
             <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
               <a href="{{ node.url }}">{{ node.title }}</a>
             </li>
-            {% if node.url == "/category.html" %}
+            {% if node.url == "/category/" %}
               {% for category in site.categories %}
                 <li class="sidebar-category-item">&raquo;
-                  <a href="/category.html#{{ category | first }}">{{ category | first }} <small>({{ category | last | size }})</small></a>
+                  <a href="/category/#{{ category | first }}">{{ category | first }} <small>({{ category | last | size }})</small></a>
                 </li>
               {% endfor %}
             {% endif %}
