@@ -15,4 +15,4 @@ markdown: redcarpet
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks", "hard_wrap"]
 
-comment:           true
+comment:           false

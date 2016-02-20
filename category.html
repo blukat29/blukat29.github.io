@@ -23,15 +23,3 @@ title: Category
   </div>
   {% endfor %}
 </div>
-
-<script>
-(function() {
-  function hlblock() {
-    $(".category-block").removeClass("active");
-    $(location.hash).addClass("active");
-  }
-  $(window).on("hashchange", hlblock);
-  $(document).ready(hlblock);
-}());
-</script>
-
