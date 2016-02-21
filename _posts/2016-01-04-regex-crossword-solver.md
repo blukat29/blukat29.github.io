@@ -4,14 +4,7 @@ title: Regex Crossword Solver with Z3
 category: algorithm
 ---
 
-## tl;dr
-
-- Translate Regex Crossword puzzle into equivalent SMT problem
-- Solve it using Z3
-- It takes few seconds, but solves very well.
-- Code: <https://github.com/blukat29/regex-crossword-solver>
-
-## 1. What's the problem?
+## 1. Problem Statement
 
 Regex Crossword (<https://regexcrossword.com/>) is a crossword puzzle where you fill in a rectangular board, so that regular expressions on every row and column are satisfied. It looks like this.
 
@@ -49,7 +42,7 @@ sat
 Download Z3 here: <https://github.com/Z3Prover/z3>
 And Z3Py documentation is here: <http://www.cs.tau.ac.il/~msagiv/courses/asv/z3py/guide-examples.htm>
 
-## 3. Overview of the solution
+## 3. Solution overview
 
 A Regex Crossword puzzle consists of multiple blanks and multiple regular expressions. Above example consists of four unknowns and four regular expressions. We could write like this.
 
@@ -70,7 +63,7 @@ Then the first constraint can be written like
 
 I wanted to automate this translation process. If I do that, then I can generate SMT problem that are equivalent to the Regex Crossword puzzle. The solution for the SMT problem (solved by Z3) is the solution to the puzzle.
 
-## 4. Translating single constraint into SMT
+## 4. Translating regex constraints into SMT problem
 
 Given string length `N` and regular expression `r`, what we want to find is, in short,
 
@@ -131,7 +124,7 @@ Regex has rich syntaxes. I simply replaced them into equivalent basic syntaxes. 
 
 ## 7. Conclusion
 
-I've coded all of these in Python with [Python Lex-Yacc](http://www.dabeaz.com/ply/) and [Z3Py](https://github.com/Z3Prover/z3). My code is available [here](https://github.com/blukat29/regex-crossword-solver).
+I've coded this method in Python using [Python Lex-Yacc](http://www.dabeaz.com/ply/) and [Z3Py](https://github.com/Z3Prover/z3).
 
 ```
 >>> import crossword
@@ -139,5 +132,5 @@ I've coded all of these in Python with [Python Lex-Yacc](http://www.dabeaz.com/p
 [['H', 'E'], ['L', 'P']]
 ```
 
-Small puzzles (2x2, 3x2) take less than 0.1 seconds, but larger puzzles (4x4, 5x5, 6x7) can take about 1~2 seconds. Besides the size, the running time heavily depends number of wildcards (`.`), quantifiers (`*`, `+`) and backrefs (`\1`).
+My code is available [here](https://github.com/blukat29/regex-crossword-solver).
 
