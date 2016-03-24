@@ -4,9 +4,9 @@ title: Building Android App Without an IDE
 category: android
 ---
 
-To build an **Android app**, the recommended tool is [Android Studio](http://developer.android.com/sdk/index.html).  But I decided to do it without Android Studio nor Eclipse. I did this, to understand how Android app works and also because I love command line. In this article, I will walk through how to build an Android App **from command line**. The app will have **proguard** enabled, and uses **JNI** library.
+To build an **Android app**, the recommended tool is [Android Studio](http://developer.android.com/sdk/index.html). But I decided to do it without Android Studio nor Eclipse. I did this, to understand how Android app works and because I prefer command line over heavy IDEs. I have to admit though, that you will need an IDE to build a serious app. In this article, I will walk through how to build a simple Android App **from command line**. The app will have **proguard** enabled, and use **JNI** feature.
 
-This tutorial is tested only in Ubuntu 14.04 LTS x86_64, on March 2016.
+This tutorial is tested only in Ubuntu 14.04 LTS x86_64.
 
 # 1. Install tools
 
@@ -81,7 +81,7 @@ Then initial files will be created under `helloapp` directory.
 
 ## 2.2. Build the app
 
-Now auto-generate 	`build.xml`.
+Now auto-generate `build.xml`.
 
 ```
 cd helloapp
@@ -94,7 +94,7 @@ Then build the app using Ant.
 ant release
 ```
 
-The app is created at `bin/HelloApp-release-unsigned.apk`.
+The app will be created at `bin/HelloApp-release-unsigned.apk`.
 
 You can clean the build using
 
@@ -114,7 +114,7 @@ keytool -genkey -v \
   -validity 365
 ```
 
-It will ask you a **keystore password**, your information (optional) and the **alias password** you provided. A keystore can hold many entries and each entry is called alias. This is why it asks for two passwords. After it's done, `mykey.keystore` file will be created. Keep this keystore file somewhere safe.
+It will ask you a **keystore password**, your information (optional) and the **alias password** you provided. (A *keystore* can hold multiple entries and each entry is called *alias*. This is why it asks for two passwords.) After it's done, `mykey.keystore` file will be created. Keep this keystore file somewhere safe.
 
 Then add these lines to `ant.properties` file.
 
@@ -125,7 +125,7 @@ key.store.password=<keystore password>
 key.alias.password=<alias password>
 ```
 
-Now  `ant release` sign the app. The signed app is stored in `bin/HelloApp-release.apk`.
+Now  `ant release` command will sign the app. The signed app will be produced as `bin/HelloApp-release.apk`.
 
 ## 2.4. Install and run the app
 
