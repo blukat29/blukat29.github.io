@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Writing Video in OSX with OpenCV
-category: Uncategorized
+category: dev
 ---
 
 ## Tutorial doesn't work!

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 성질 급한 사람을 위한 LaTeX
-category: Uncategorized
+category: dev
 ---
 
 LaTex 입문서로는 [142분 동안 익히는 LaTeX 2e](http://texdoc.net/texmf-dist/doc/latex/lshort-korean/lshort-kr.pdf) 라는 좋은 한국어 문서가 있으나, 나처럼 성질 급한 사람을 위해 이 글을 쓴다.

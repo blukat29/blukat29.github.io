@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building Android App Without an IDE
-category: android
+category: dev
 ---
 
 To build an **Android app**, the recommended tool is [Android Studio](http://developer.android.com/sdk/index.html). But I decided to do it without Android Studio nor Eclipse. I did this, to understand how Android app works and because I prefer command line over heavy IDEs. I have to admit though, that you will need an IDE to build a serious app. In this article, I will walk through how to build a simple Android App **from command line**. The app will have **proguard** enabled, and use **JNI** feature.
