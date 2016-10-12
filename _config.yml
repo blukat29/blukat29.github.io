@@ -14,4 +14,6 @@ kramdown:
   input: GFM
   hard_wrap: true
 
+google_analytics: UA-85597106-1
+
 comment:           false
