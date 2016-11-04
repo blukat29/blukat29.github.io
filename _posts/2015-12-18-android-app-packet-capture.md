@@ -13,12 +13,69 @@ category: reversing
 
 ## 1. 우분투에 PPTP VPN 서버 설치
 
-<https://wordpress.update.sh/archives/16>
+### 1.1. 설치
 
+```
+sudo apt-get install pptpd
+```
+
+### 1.2. PPTP 설정
+
+IP와 DNS를 설정한다.
+
+`/etc/pptpd.conf` 파일에 다음 내용을 입력하고 (아이피는 192.168 대역 내에서 다른 것을 써도 된다),
+
+```
+localip 192.168.13.1
+remoteip 192.168.13.100-200
+```
+
+`/etc/ppp/pptpd-options` 파일에 다음 내용을 입력한다.
+
+```
+ms-dns 8.8.8.8
+ms-dns 8.8.4.4
+```
+
+### 1.3. VPN 계정 설정
+
+`/etc/ppp/chap-secrets`에 사용할 아이디와 비밀번호를 입력한다.
+
+```
+# Secrets for authentication using CHAP
+# client        server  secret                  IP addresses
+UserId          *       Pa55w0rd                *
+```
+
+### 1.4. 포워딩 설정
+
+PPTP가 프록시 서버로서 작동하려면 PPTP 클라이언트로부터 오는 패킷을 모두 포워딩 하도록 설정해줘야 한다.
+
+```
+sudo iptables -t nat -A POSTROUTING -s 192.168.13.0/24 -o eth0 -j MASQUERADE
+```
+
+그리고 `/etc/sysctl.conf`에서 다음 줄이 주석처리 되어있다면 주석을 지운다.
+
+```
+net.ipv4.ip_forward=1
+```
+
+`/etc/sysctl.conf`를 고쳤다면 다음 명령으로 설정을 적용시킨다.
+
+```
+sudo sysctl -p
+```
+
+### 1.5. pptpda 재시작
+
+```
+sudo service pptpd restart
+```
 
 ## 2. 안드로이드에서 VPN 서버에 접속
 
-안드로이드 환경설정 안에 VPN 설정에 들어가서. 1에서 설정한 아이디와 비밀번호로 접속한다. 접속에 성공하면 먼저 인터넷이 되는지 확인하고, 그 다음 <https://www.whatismyip.com/> 같은 사이트에서 자신의 IP가 우분투 서버의 IP로 나오는 것을 확인한다.
+안드로이드 환경설정 안에 VPN 설정에 들어가서. 1.3에서 설정한 아이디와 비밀번호로 접속한다. 접속에 성공하면 먼저 인터넷이 되는지 확인하고, 그 다음 <https://www.whatismyip.com/> 같은 사이트에서 자신의 IP가 우분투 서버의 IP로 나오는 것을 확인한다.
 
 
 ## 3. tcpdump로 HTTP 캡쳐
