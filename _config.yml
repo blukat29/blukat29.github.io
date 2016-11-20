@@ -16,4 +16,4 @@ kramdown:
 
 google_analytics: UA-85597106-1
 
-comment:           false
+comment: true
