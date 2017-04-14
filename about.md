@@ -19,7 +19,6 @@ Interested in Computer security, Reverse engineering, Python.
 - [docker-cross](https://github.com/blukat29/docker-cross) - Docker image containing binutils and gdb-simulator for many architectures.
 - [apkext](https://github.com/blukat29/apkext) - Small script for easy decoding and decompilation of an APK.
 - [search-libc](https://github.com/blukat29/search-libc) - Web wrapper of [libc-database](https://github.com/niklasb/libc-database). Search libc from known offsets. [Demo](http://libc.blukat.me)
-- [demangle-online](https://blukat29.github.io/demangle-online/) - Demangle compiled symbols in your browser. [Demo](http://demangle.blukat.me)
 - [Regex Search with Jaum](https://github.com/blukat29/regex-search) - 크롬 초성검색 확장 프로그램 (Chrome extension that searches Korean text by consonants).
 - [jemu](http://blukat29.github.io/jemu/) - In-browser x86 assembly emulator for learning.
 - [Colorful History](https://github.com/blukat29/cmps115) - Small Chrome extension that shows statistics about your browsing history, for fun.
@@ -37,6 +36,7 @@ Interested in Computer security, Reverse engineering, Python.
 
 ### CTFs
 
+- Codegate 2017 Finals 3rd (Old GoatskiN)
 - DEF CON CTF 2016 Finals 5th ([Kaishack\_GoN](http://kaishackgon.blogspot.kr/))
 - SECCON CTF 2016 Finals 2nd (PwnPineappleApplePwn)
 - SECCON CTF 2015 Quals 2nd (GoN)
