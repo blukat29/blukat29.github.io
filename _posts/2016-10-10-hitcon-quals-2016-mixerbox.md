@@ -28,6 +28,8 @@ restore_arch:
   retf
 ```
 
+<!--more-->
+
 `retf` instruction pops two numbers, return address and `cs` segment register. According to [here](http://wiki.osdev.org/X86-64#Long_Mode) and [here](http://stackoverflow.com/a/32384358), setting `cs=0x23` puts the CPU into x86 mode, and setting `cs=0x33` puts the CPU into x86-64 mode (long mode). So the interpretation of the machine code differs before and after `retf`.
 
 x86 and x86-64 assemblies are not so much different. So there was no big problem reading the code with 32-bit IDA. But some functions were cannot be disassembled so I used 64-bit IDA for those functions.

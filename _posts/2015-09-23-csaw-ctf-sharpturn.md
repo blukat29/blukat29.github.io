@@ -14,6 +14,8 @@ HEAD  branches/  config  description  hooks/  info/  objects/  refs/
 
 Git 저장소의 `.git/` 디렉토리임을 대번에 알 수 있었다.
 
+<!--more-->
+
 ## 1. 파일 복구하기
 
 커밋 로그로부터 원본 파일을 복구하는 건 전혀 어렵지 않다. 여러 가지 방법이 있는데, 나는 local repository를 clone하는 방법을 써서 `Makefile`과 `sharp.cpp`, 두 파일을 얻었다. `sharp.cpp`는 이렇게 생겼다.

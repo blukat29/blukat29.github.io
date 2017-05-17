@@ -15,6 +15,8 @@ This program opens a BMP image and extracts LSB of each pixel. Then they are sav
 
 The main logic looks like this:
 
+<!--more-->
+
 ```c
 struct BMP_HEADER {
     u32 header_size;

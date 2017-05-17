@@ -12,6 +12,8 @@ fireblossom_claypot은 매우 작은 프로그램인데, 외부에서의 ptrace�
 
 ![claypot.png](/assets/2015/10/claypot.png)
 
+<!--more-->
+
 ### 2. Reverse fireblossom main
 
 ```c

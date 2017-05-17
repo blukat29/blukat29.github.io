@@ -24,6 +24,8 @@ blukat-PC
 
 세 번째 줄은 브라우저의 IP와 포트인 것 같고 (이 경우엔 IPv6 loopback 주소인 ::1), 그 다음 브라우저의 User-Agent, 알수없는 1488, 현재 타임스탬프, 그리고 컴퓨터 이름이 나왔다. 1488은 이리 저리 생각하다가 작업관리자를 켜서 holycat.exe의 PID라는 것을 알아냈다. 이 값들을 조합하면 맞는 비밀번호가 되는 식인 것 같다.
 
+<!--more-->
+
 ## 2. 코드 분석
 
 바이너리를 열어보았는데 심볼이 없어서 좀 불편했다. 그래서 `<body>`나 `Access Denied`같은 문자열로부터 역추적하여 각 URL에 해당하는 request handler를 찾았다. `Login_Check_4019D0`, `Access_Denied_401330`, `Debug_Server_Status_401CF0`, `Show_Key_401430` 등이다.  `Login_Check` 함수는 여러 라이브러리 함수들을 호출하기 때문에 그 역할을 알아내는 것이 중요했다.

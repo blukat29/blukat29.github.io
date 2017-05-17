@@ -30,6 +30,8 @@ pcap_dispatch(0x1dd50d0, 0xffffffff, 0x40375d, 0)  = 0
 pcap_dispatch(0x1dd50d0, 0xffffffff, 0x40375d, 0)  = 0
 ```
 
+<!--more-->
+
 ## 2. read_config 분석
 
 config 파일은 rule 여러 개로 이뤄져 있는데, rule의 모양은 다음과 같아야 한다.

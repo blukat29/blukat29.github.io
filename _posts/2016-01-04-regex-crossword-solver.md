@@ -18,6 +18,8 @@ Thomas Parslow has solved hexagonal version in Haskell (<http://almostobsolete.n
 
 I've decided to take another approach, using SMT solver.
 
+<!--more-->
+
 ## 2. Z3 SMT Solver
 
 [SMT](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories) problem is a extended version of [SAT](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) problem. Given a formula, checking if there is a set of values for variables that satisfies the formula. The difference is, that SAT only deals with boolean expressions, whereas SMT can handle various types such as integer, bit vector and real number.

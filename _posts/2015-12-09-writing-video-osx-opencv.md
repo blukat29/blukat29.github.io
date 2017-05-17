@@ -36,6 +36,8 @@ It doesn't work on default OpenCV library for OSX. The program runs without erro
 
 According to a [Stackoverflow Thread](http://stackoverflow.com/questions/4872383/how-to-write-a-video-file-with-opencv) OSX version of OpenCV does not have a working video writer. Ouch! Instead, this thread suggests me another way.
 
+<!--more-->
+
 ## Saving images and stitching them using ffmpeg
 
 ### Save images

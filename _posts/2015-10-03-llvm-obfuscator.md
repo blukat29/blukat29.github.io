@@ -16,6 +16,8 @@ Control Flow Flattening, Instructions Substitution, Bogus Control Flow, 이 세 
 
 cmake 외에 특별한 dependency는 없는 듯 하다. 소스에 clang과 LLVM이 통째로 포함되어 있어서 빌드가 상당히 오래 걸린다. 최소 2~30분 정도는 생각해야 한다.
 
+<!--more-->
+
 ### 2. 간단한 테스트
 
 아래의 엄청 짧은 C코드를 가지고 테스트해보았다.

@@ -33,6 +33,8 @@ bootcode.bin: data
 
 Everything went well until we saw that the image contains only two files. The image supposed to contain `/etc/ld.so.preload` file, but it didn't. `UART.TXT` is just a funny text file explaining where is UART port. And `bootcode.bin` seemed to be our task. After some googling, we've found that `bootcode.bin` is "secondary boot loader" that runs on Raspberry Pi's GPU.
 
+<!--more-->
+
 ## 2. Reverse bootcode.bin
 
 Raspberry Pi's GPU is "Broadcom VideoCore IV processor". We used an in-browser disassembler for this architecture (<http://hermanhermitage.github.io/videocore-disjs/>). Then we reverse engineered the assembly. These resources helped me a lot with understanding the architecture:

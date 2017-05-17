@@ -31,6 +31,8 @@ wget https://people.debian.org/~aurel32/qemu/armhf/vmlinuz-3.2.0-4-vexpress
 
 이 중에서 qcow2 이미지는 시스템을 사용하면 내용이 바뀌기 때문에 (디스크 이미지니까) 깨끗한 버전을 하나 백업해 두는 것도 좋은 생각이다.
 
+<!--more-->
+
 ## 2. Basic run
 
 부팅에 필요한 최소한의 옵션은 아래와 같다.

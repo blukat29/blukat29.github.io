@@ -11,6 +11,7 @@ author:
   url:            https://github.com/blukat29
 
 paginate: 5
+excerpt_separator: <!--more-->
 
 markdown: kramdown
 kramdown:

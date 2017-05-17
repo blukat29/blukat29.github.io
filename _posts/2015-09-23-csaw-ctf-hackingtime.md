@@ -33,6 +33,8 @@ BNE lab_8102  # Branch if not equal
 
 ![HackingTime](/assets/2015/09/hackingtime.png)
 
+<!--more-->
+
 ## 4. 비밀번호 루틴 찾기
 
 이제 저 비밀번호를 묻는 부분을 찾아야 한다. 프로그램이 상당히 방대했고 어셈블리가 낯설었기 때문에 _RESET부터 top-down으로 가는 방법은 어렵다고 판단했다. 그래서 화면에 출력되는 문자열을 기준으로 찾기로 했다.

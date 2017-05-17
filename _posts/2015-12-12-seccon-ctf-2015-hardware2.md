@@ -15,6 +15,8 @@ The problem can be downloaded at <https://github.com/SECCON/SECCON2015_online_CT
 
 ![frontview.jpg](/assets/2015/12/DSC_0002_1.jpg)
 
+<!--more-->
+
 As in the problem, two ICs on the breadboard are 74HC161. According to the [datasheet](http://www.ti.com/lit/gpn/cd54hc163), it's 4-bit counter. 4-bit counter is a circuit that changes its output 0000 -> 0001 -> 0010 -> 0011 -> ... -> 1110 -> 1111 -> 0000, on every clock pulse.
 
 The circuit implements one 8-bit counter using two 4-bit counters. Carry output(TC) of first counter is fed into clock(CP) of second counter. Thus, every time first counter overflows, second counter is incremented.

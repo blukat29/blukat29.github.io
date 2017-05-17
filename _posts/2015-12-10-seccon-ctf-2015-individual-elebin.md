@@ -25,6 +25,8 @@ $ file *
 
 There are number of ways to deal with this problem
 
+<!--more-->
+
 ## 1. Static analysis
 
 All of them can be opened and disassembled with IDA, without any additional effort. But studying each architecture and understanding assemblies will not be done in 24 hours. We abandoned this approach.

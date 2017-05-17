@@ -80,6 +80,8 @@ void check_8A(char* input) {  // input given through w24, stored at w14
 }
 ```
 
+<!--more-->
+
 ### 2. keygen
 
 ```py

@@ -19,6 +19,8 @@ std::allocator<char>::allocator()
 
 ltrace상에 나오는 mangling된 이름을 원래대로 표시하고 싶다면 `-C`옵션을 쓰면 된다.
 
+<!--more-->
+
 ```
 $ ltrace ./knockedupd
 __libc_start_main(0x404497, 1, 0x7fff40725b88, 0x406ba0 <unfinished ...>

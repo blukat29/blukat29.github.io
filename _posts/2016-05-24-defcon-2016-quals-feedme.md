@@ -41,6 +41,8 @@ void server()
 
 So we can exploit this program by brute-forcing stack canary and doing ROP to get a shell. Classic.
 
+<!--more-->
+
 ```python
 import pwnbox
 import struct

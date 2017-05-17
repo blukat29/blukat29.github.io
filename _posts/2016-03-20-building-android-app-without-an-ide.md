@@ -8,6 +8,8 @@ To build an **Android app**, the recommended tool is [Android Studio](http://dev
 
 This tutorial is tested only in Ubuntu 14.04 LTS x86_64.
 
+<!--more-->
+
 # 1. Install tools
 
 ## 1.1. Requirements

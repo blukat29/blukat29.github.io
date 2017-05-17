@@ -18,6 +18,8 @@ AVR의 메모리는 Flash memory, SRAM, EEPROM으로 구성되어 있고, 각자
 
 Flash memory와 SRAM은 둘 다 0부터 시작하는 16비트 address space를 가지고 있는데, 이를 ELF파일과 IDA에서는 프로그램이 0x0000부터 시작하고, 데이터가 0x800000부터 시작하는 것으로 표현하고 있다. 실제 주소가 0x800000가 아님에 주의해야 한다.
 
+<!--more-->
+
 ### 2. 레지스터
 
 AVR에는 총 32개의 general purpose 레지스터가 있다. AVR에서는 레지스터가 memory-map되어 있어서 r0~r31는 메모리 0x00~0x1f에 위치한다.

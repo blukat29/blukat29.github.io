@@ -19,6 +19,8 @@ main부터는 일반적인 C함수와 마찬가지로 callee-save인 레지스�
 
 AVR 하드웨어에는 프로그램을 하나만 올리기 때문에 모든 라이브러리 함수가 static하게 compile되어있다. 따라서 AVR 프로그램을 리버싱 할 땐 printf나 strcmp따위의 라이브러리 함수를 찾아내는 것이 중요하다.
 
+<!--more-->
+
 ### 2. Addresses
 
 AVR은 8비트 프로세서라 레지스터가 8비트씩인데 주소는 16비트까지 지원한다. 그래서 함수의 parameter 하나는 두 개의 레지스터로 이뤄져 있다. 그래서 16비트  상수 address (printf의 format string과 같은)를 전달해야 하면 두 번의 LDI 인스트럭션이나 ADD, ADC 인스트럭션을 이용해 두 번에 걸쳐 상수를 세팅하게 된다.
