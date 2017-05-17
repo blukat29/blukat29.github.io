@@ -4,10 +4,13 @@ permalink:        /:year/:month/:title/
 # Setup
 title:            blukat29
 url:              http://blukat29.github.io
+baseurl:          /
 
 author:
   name:           'blukat29'
   url:            https://github.com/blukat29
+
+paginate: 5
 
 markdown: kramdown
 kramdown:
@@ -17,3 +20,6 @@ kramdown:
 google_analytics: UA-85597106-1
 
 comment: true
+
+# Gems
+gems: [jekyll-paginate]
