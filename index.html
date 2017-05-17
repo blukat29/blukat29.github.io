@@ -12,6 +12,19 @@ title: Home
       <h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
       <span class="post-date">{{ post.date | date_to_string }}</span>
       {{ post.excerpt }}
+
+      {% capture content_words %}
+        {{ post.content | number_of_words }}
+      {% endcapture %}
+      {% capture excerpt_words %}
+        {{ post.excerpt | number_of_words }}
+      {% endcapture %}
+
+      {% if excerpt_words != content_words %}
+      <p><a class="btn btn-sm btn-primary" href="{{ post.url }}" role="button">
+        Read more <i class="fa fa-arrow-circle-right"></i></a></p>
+      {% endif %}
+
       <hr></hr>
     </div>
   </div>
