@@ -115,3 +115,11 @@ h4.article-box-top {
 .comment-box {
   margin-top: 3em;
 }
+
+.about-img {
+  float: right;
+  width: 25%;
+}
+.about-img img {
+  width: 100%;
+}
