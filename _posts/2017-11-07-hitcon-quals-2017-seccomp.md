@@ -12,6 +12,8 @@ It is a small program. This program hides its core logic inside the seccomp sysc
 
 The filter rules stored at 0x201020 can be easily decoded using [seccomp-tools](https://github.com/david942j/seccomp-tools). I have used [bpftools](https://github.com/cloudflare/bpftools) for the decoding purpose, but outputs from seccomp-tools are more human-readable.
 
+<!--more-->
+
 ```c
 int __cdecl main(int argc, const char **argv, const char **envp)
 {
