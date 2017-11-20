@@ -52,3 +52,4 @@ Interested in Software Engineering, Security, Reverse engineering.
 - Ghost in the Shellcode 2015 3rd (GoN)
 - 2014 Whitehat Contest 2nd (GoN)
 
+{% include defer_css.html %}
