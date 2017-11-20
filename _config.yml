@@ -17,6 +17,8 @@ markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: true
+sass:
+  style: compressed
 
 google_analytics: UA-85597106-1
 
