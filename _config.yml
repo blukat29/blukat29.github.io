@@ -11,6 +11,8 @@ author:
   url:            https://github.com/blukat29
 
 paginate: 5
+paginate_path: /page/:num/
+
 excerpt_separator: <!--more-->
 
 markdown: kramdown
@@ -25,4 +27,5 @@ google_analytics: UA-85597106-1
 comment: true
 
 # Gems
-gems: [jekyll-paginate]
+gems:
+  - jekyll-paginate
