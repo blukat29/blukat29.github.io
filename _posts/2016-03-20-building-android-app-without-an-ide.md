@@ -4,6 +4,16 @@ title: Building Android App Without an IDE
 category: dev
 ---
 
+**UPDATE 2018-03-12:** "android create project" command is removed from newer sdk tools (since 25.3.0). But you still can download older sdk from these links:
+
+- <http://dl-ssl.google.com/android/repository/tools_r[rev]-windows.zip>
+- <http://dl-ssl.google.com/android/repository/tools_r[rev]-linux.zip>
+- <http://dl-ssl.google.com/android/repository/tools_r[rev]-macosx.zip>
+
+where `[rev]` is the exact revision number such as `24`, `25.2.5`. Lookup the revision at [this page](https://developer.android.com/studio/releases/sdk-tools.html).
+
+---
+
 To build an **Android app**, the recommended tool is [Android Studio](http://developer.android.com/sdk/index.html). But I decided to do it without Android Studio nor Eclipse. I did this, to understand how Android app works and because I prefer command line over heavy IDEs. I have to admit though, that you will need an IDE to build a serious app. In this article, I will walk through how to build a simple Android App **from command line**. The app will have **proguard** enabled, and use **JNI** feature.
 
 This tutorial is tested only in Ubuntu 14.04 LTS x86_64.
@@ -211,4 +221,10 @@ Shared library (\*.so) files for each architecture should be created at `libs/`.
 ant release
 ```
 
+# References
+
+- <https://developer.android.com/studio/tools/help/android.html>
+- <http://eqdn.tech/android-development-on-the-command-line/>
+- <https://stackoverflow.com/a/46994747/8939955>
+- <https://stackoverflow.com/a/27043655/8939955>
 
