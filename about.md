@@ -11,7 +11,7 @@ title: About
 
 Student at School of Computing
 Korea Advanced Institute of Science and Technology (KAIST)
-Member of in-campus hacking group <a href="http://gon.kaist.ac.kr">GoN</a>.
+Member of in-campus hacking group <a href="http://gon.kaist.ac.kr">GoN</a> and <a href="https://kaishackgon.blogspot.com/">KaisHack</a>.
 Interested in Software Engineering, Security, Reverse engineering.
 
 <i class="fa-fw fa fa-envelope" aria-hidden="true"></i> yunjong (at) kaist.ac.kr
@@ -25,25 +25,26 @@ Interested in Software Engineering, Security, Reverse engineering.
 
 ### Work experience
 
-- **Intern**, EXEM. (2015)
-  Large-scale automated video surveillence system development. *Apache spark, Java, Scala, OpenCV*
-- **Intern**, Pinion Industries. (2014)
+- **Developer Intern**, EXEM. (2015)
+  Large-scale automated video surveillence system development. *Apache spark, Kafka, OpenCV, Java, Scala*
+- **Security Researcher Intern**, Pinion Industries. (2014)
   Android penetration testing.
 - **Student Senior**, KAIST Computer Emergency Response Team (CERT). (2013-2015)
   Regular penetration testing and incident response.
 
 ### Code
 
-- [qual](https://github.com/protos37/qual) - GoN CTF problem archiving and solving service.
-- [GraphEye](https://github.com/Nova-12/GraphEye) - Web client for Spark GraphX, targetted non-engineer users.
-- [Regex Crossword Solver](https://github.com/blukat29/regex-crossword-solver) - Solves [RegexCrossword](https://regexcrossword.com/) with Z3.
+- [Regex Crossword Solver](https://github.com/blukat29/regex-crossword-solver) - Solves [RegexCrossword](https://regexcrossword.com/) with Z3. [Blog article](https://blukat29.github.io/2016/01/regex-crossword-solver/)
 - [search-libc](https://github.com/blukat29/search-libc) - Web wrapper of [libc-database](https://github.com/niklasb/libc-database). Search libc from known offsets. [Demo](http://libc.blukat.me)
+- [qual](https://github.com/protos37/qual) - GoN CTF problem archiving and solving service. [Site (only for members)](http://gon.kaist.ac.kr/qual/)
+- [GraphEye](https://github.com/Nova-12/GraphEye) - Web client for Spark GraphX, targetted non-engineer users.
 - [pwnbox](https://github.com/protos37/pwnbox) - CTF Toolbox.
 - Number of open source contributions: [My GitHub pull requests](https://github.com/pulls?q=is%3Apr+author%3Ablukat29+is%3Aclosed)
 
 ### CTF (Hacking competition)
 
-- *Organized* Samsung CTF 2017 (as Kaishack\_GoN) ([CTF source](https://github.com/kaishackgon/sctf2017))
+- *Organized* Samsung CTF 2018 (as Kaishack) ([Qual source](https://github.com/kaishack/sctf2018_qual), [Finals source](https://github.com/kaishack/sctf2018))
+- *Organized* Samsung CTF 2017 (as Kaishack) ([CTF source](https://github.com/kaishack/sctf2017))
 - Codegate 2017 Finals 3rd (Old GoatskiN)
 - DEF CON CTF 2016 Finals 5th ([Kaishack\_GoN](http://kaishackgon.blogspot.kr/))
 - SECCON CTF 2016 Finals 2nd (PwnPineappleApplePwn)
