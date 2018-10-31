@@ -26,27 +26,29 @@ Interested in Software Engineering, Security, Reverse engineering.
 ### Work experience
 
 - **Developer Intern**, EXEM. (2015)
-  Large-scale automated video surveillence system development. *Apache spark, Kafka, OpenCV, Java, Scala*
+  Developed large-scale automated video surveillence system.
+  *Apache spark, Kafka, OpenCV, Spring framework, Java, Scala*
 - **Security Researcher Intern**, Pinion Industries. (2014)
-  Android penetration testing.
+  Android and web penetration testing.
 - **Student Senior**, KAIST Computer Emergency Response Team (CERT). (2013-2015)
   Regular penetration testing and incident response.
 
 ### Code
 
-- [Regex Crossword Solver](https://github.com/blukat29/regex-crossword-solver) - Solves [RegexCrossword](https://regexcrossword.com/) with Z3. [Blog article](https://blukat29.github.io/2016/01/regex-crossword-solver/)
-- [search-libc](https://github.com/blukat29/search-libc) - Web wrapper of [libc-database](https://github.com/niklasb/libc-database). Search libc from known offsets. [Demo](http://libc.blukat.me)
-- [qual](https://github.com/protos37/qual) - GoN CTF problem archiving and solving service. [Site (only for members)](http://gon.kaist.ac.kr/qual/)
-- [GraphEye](https://github.com/Nova-12/GraphEye) - Web client for Spark GraphX, targetted non-engineer users.
-- [pwnbox](https://github.com/protos37/pwnbox) - CTF Toolbox.
-- Number of open source contributions: [My GitHub pull requests](https://github.com/pulls?q=is%3Apr+author%3Ablukat29+is%3Aclosed)
+- [Regex Crossword Solver](https://github.com/blukat29/regex-crossword-solver) - Solves [RegexCrossword](https://regexcrossword.com/) with Z3. [blog](https://blukat29.github.io/2016/01/regex-crossword-solver/).
+- [libc.blukat.me](https://libc.blukat.me) - Lookup libc library version from information leaks.
+- [decode.blukat.me](https://decode.blukat.me) - Analyze data of unknown encoding.
+- [unollvm](https://github.com/blukat29/unollvm) - Obfuscator-LLVM deobfuscator that produces patched binary.
+- [Qual](https://github.com/protos37/qual) - GoN CTF website. [link](http://gon.kaist.ac.kr/qual/)
+- Open source contributions - [see my GitHub pull requests](https://github.com/pulls?q=is%3Apr+author%3Ablukat29+is%3Aclosed)
 
 ### CTF (Hacking competition)
 
+- Cyber Conflict Excercise 2018 Blue Team 3rd
 - *Organized* Samsung CTF 2018 (as Kaishack) ([Qual source](https://github.com/kaishack/sctf2018_qual), [Finals source](https://github.com/kaishack/sctf2018))
 - *Organized* Samsung CTF 2017 (as Kaishack) ([CTF source](https://github.com/kaishack/sctf2017))
 - Codegate 2017 Finals 3rd (Old GoatskiN)
-- DEF CON CTF 2016 Finals 5th ([Kaishack\_GoN](http://kaishackgon.blogspot.kr/))
+- DEFCON CTF 2016 Finals 5th (Kaishack\_GoN)
 - SECCON CTF 2016 Finals 2nd (PwnPineappleApplePwn)
 - SECCON CTF 2015 Quals 2nd (GoN)
 - Belluminar 2015 2nd (GoN)
