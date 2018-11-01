@@ -33,6 +33,13 @@ Interested in Software Engineering, Security, Reverse engineering.
 - **Student Senior**, KAIST Computer Emergency Response Team (CERT). (2013-2015)
   Regular penetration testing and incident response.
 
+### Technical skills
+
+- Languages - C, C++, Python, JavaScript, Java, bash
+- Tools - Git, Docker, MySQL, MongoDB, Celery, Amazon AWS (ec2, s3, devicefarm)
+- Web - Django, Flask, webpack, vue.js
+- Security - LLVM (Instrumentation), ONOS (SDN)
+
 ### Code
 
 - [Regex Crossword Solver](https://github.com/blukat29/regex-crossword-solver) - Solves [RegexCrossword](https://regexcrossword.com/) with Z3. [blog](https://blukat29.github.io/2016/01/regex-crossword-solver/).
@@ -50,7 +57,6 @@ Interested in Software Engineering, Security, Reverse engineering.
 - Codegate 2017 Finals 3rd (Old GoatskiN)
 - DEFCON CTF 2016 Finals 5th (Kaishack\_GoN)
 - SECCON CTF 2016 Finals 2nd (PwnPineappleApplePwn)
-- SECCON CTF 2015 Quals 2nd (GoN)
 - Belluminar 2015 2nd (GoN)
 - Ghost in the Shellcode 2015 3rd (GoN)
 - 2014 Whitehat Contest 2nd (GoN)
