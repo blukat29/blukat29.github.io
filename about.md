@@ -7,7 +7,7 @@ title: About
 <img src="/assets/profile.jpg" alt="profile.jpg" />
 </div>
 
-### Yunjong Jeong (blukat29)
+### Yunjong Jeong
 
 Student at School of Computing
 Korea Advanced Institute of Science and Technology (KAIST)
@@ -23,12 +23,16 @@ Interested in Software Engineering, Security, Reverse engineering.
 - M.S. candidate, **Information Security**, KAIST. (2017-)
 - B.S., **Computer Science**, KAIST. (2013-2016)
 
+### Academic Papers
+
+- D. Jang, **Y. Jeong**, S. Lee, M. Park, K. Kwak, D. Kim, and B. B. Kang, "Rethinking Anti-Emulation Techniques for Large-Scale Software Deployment", Computers & Security, 2019. [paper](https://www.sciencedirect.com/science/article/pii/S0167404818310216)
+
 ### Work experience
 
-- **Developer Intern**, EXEM. (2015)
+- **Software Developer**, EXEM. (2015)
   Developed large-scale automated video surveillence system.
   *Apache spark, Kafka, OpenCV, Spring framework, Java, Scala*
-- **Security Researcher Intern**, Pinion Industries. (2014)
+- **Security Researcher**, Pinion Industries. (2014)
   Android and web penetration testing.
 - **Student Senior**, KAIST Computer Emergency Response Team (CERT). (2013-2015)
   Regular penetration testing and incident response.
@@ -37,7 +41,7 @@ Interested in Software Engineering, Security, Reverse engineering.
 
 - Languages - C, C++, Python, JavaScript, Java, bash
 - Tools - Git, Docker, MySQL, MongoDB, Celery, Amazon AWS (ec2, s3, devicefarm)
-- Web - Django, Flask, webpack, vue.js
+- Web - Django, Flask, webpack, vue.js, express
 - Security - LLVM (Instrumentation), ONOS (SDN)
 
 ### Code
@@ -47,7 +51,7 @@ Interested in Software Engineering, Security, Reverse engineering.
 - [decode.blukat.me](https://decode.blukat.me) - Analyze data of unknown encoding.
 - [unollvm](https://github.com/blukat29/unollvm) - Obfuscator-LLVM deobfuscator that produces patched binary.
 - [Qual](https://github.com/protos37/qual) - GoN CTF website. [link](http://gon.kaist.ac.kr/qual/)
-- Open source contributions - [see my GitHub pull requests](https://github.com/pulls?q=is%3Apr+author%3Ablukat29+is%3Aclosed)
+- Open source contributions - [my GitHub pull requests](https://github.com/search?q=is%3Apr+author%3Ablukat29)
 
 ### CTF (Hacking competition)
 
