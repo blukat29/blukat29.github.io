@@ -26,6 +26,7 @@ Interested in Software Engineering, Security, Reverse engineering.
 ### Academic Papers
 
 - D. Jang, **Y. Jeong**, S. Lee, M. Park, K. Kwak, D. Kim, and B. B. Kang, "Rethinking Anti-Emulation Techniques for Large-Scale Software Deployment", Computers & Security, 2019. [paper](https://www.sciencedirect.com/science/article/pii/S0167404818310216)
+- D. Jang, J. Kim, H. Lee, M. Park, **Y. Jeong** and B. B. Kang, "On the Analysis of Byte-Granularity Heap Randomization", IEEE Transactions on Dependable and Secure Computing (TDSC), 2019.
 
 ### Work experience
 
