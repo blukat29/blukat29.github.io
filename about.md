@@ -21,7 +21,7 @@ Interested in Software Engineering, Security, Reverse engineering.
 ### Education
 
 - M.S. candidate, **Information Security**, KAIST. (2017-)
-- B.S., **Computer Science**, KAIST. (2013-2016)
+- B.S., **Computer Science**, KAIST. (2013-2017)
 
 ### Academic Papers
 
@@ -30,7 +30,10 @@ Interested in Software Engineering, Security, Reverse engineering.
 
 ### Work experience
 
-- **Software Developer**, EXEM. (2015)
+- **Software Developer**, [TEEware](http://teeware.io) (2018-)
+  Security softwares for data-in-use encryption and key management.
+  *ARM TrustZone, Intel SGX, AWS, Azure, Docker, gRPC, C++, Node.js*
+- **Software Developer**, [EXEM](https://www.ex-em.com). (2015)
   Developed large-scale automated video surveillence system.
   *Apache spark, Kafka, OpenCV, Spring framework, Java, Scala*
 - **Security Researcher**, Pinion Industries. (2014)
@@ -40,8 +43,8 @@ Interested in Software Engineering, Security, Reverse engineering.
 
 ### Technical skills
 
-- Languages - C, C++, Python, JavaScript, Java, bash
-- Tools - Git, Docker, MySQL, MongoDB, Celery, Amazon AWS (ec2, s3, devicefarm)
+- Languages - C, C++, JavaScript (Node.js), Python, Java, bash
+- Tools - Git, Docker, MySQL, MongoDB, Amazon AWS (ec2, s3, devicefarm), MS Azure
 - Web - Django, Flask, webpack, vue.js, express
 - Security - LLVM (Instrumentation), ONOS (SDN)
 
