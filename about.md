@@ -12,7 +12,7 @@ title: About
 Student at School of Computing
 Korea Advanced Institute of Science and Technology (KAIST)
 Member of in-campus hacking group <a href="http://gon.kaist.ac.kr">GoN</a> and <a href="https://kaishackgon.blogspot.com/">KaisHack</a>.
-Interested in Software Engineering, Security, Reverse engineering.
+Interested in software engineering, applied cryptography and reverse engineering.
 
 <i class="fa-fw fa fa-envelope" aria-hidden="true"></i> yunjong (at) kaist.ac.kr
 <i class="fa-fw fa fa-github" aria-hidden="true"></i><a href="https://github.com/blukat29"> blukat29</a>
@@ -20,33 +20,33 @@ Interested in Software Engineering, Security, Reverse engineering.
 
 ### Education
 
-- M.S. candidate, **Information Security**, KAIST. (2017-)
+- M.S., **Information Security**, KAIST. (2017-2020)
 - B.S., **Computer Science**, KAIST. (2013-2017)
 
 ### Academic Papers
 
-- D. Jang, **Y. Jeong**, S. Lee, M. Park, K. Kwak, D. Kim, and B. B. Kang, "Rethinking Anti-Emulation Techniques for Large-Scale Software Deployment", Computers & Security, 2019. [paper](https://www.sciencedirect.com/science/article/pii/S0167404818310216)
-- D. Jang, J. Kim, H. Lee, M. Park, **Y. Jeong** and B. B. Kang, "On the Analysis of Byte-Granularity Heap Randomization", IEEE Transactions on Dependable and Secure Computing (TDSC), 2019.
+- J. Kim, D. Jang, **Y. Jeong** and B. B. Kang, "POLaR: Per-Allocation Object Layout Randomization", IEEE Conference on Dependable Systems and Networks (DSN), 2019. [paper](https://daehee87.github.io/data/polar.pdf)
+- D. Jang, **Y. Jeong**, S. Lee, M. Park, K. Kwak, D. Kim, and B. B. Kang, "Rethinking Anti-Emulation Techniques for Large-Scale Software Deployment", Computers & Security, 2019. [paper](https://daehee87.github.io/data/qemu.pdf)
+- D. Jang, J. Kim, H. Lee, M. Park, **Y. Jeong** and B. B. Kang, "On the Analysis of Byte-Granularity Heap Randomization", IEEE Transactions on Dependable and Secure Computing (TDSC), 2019. [pdf](https://daehee87.github.io/data/ruma.pdf)
 
 ### Work experience
 
 - **Software Developer**, [TEEware](http://teeware.io) (2018-)
   Security softwares for data-in-use encryption and key management.
-  *ARM TrustZone, Intel SGX, AWS, Azure, Docker, gRPC, C++, Node.js*
+  *ARM TrustZone, Intel SGX, AWS, Azure, Kubernetes, C++, Go*
 - **Software Developer**, [EXEM](https://www.ex-em.com). (2015)
   Developed large-scale automated video surveillence system.
   *Apache spark, Kafka, OpenCV, Spring framework, Java, Scala*
 - **Security Researcher**, Pinion Industries. (2014)
   Android and web penetration testing.
 - **Student Senior**, KAIST Computer Emergency Response Team (CERT). (2013-2015)
-  Regular penetration testing and incident response.
+  Penetration testing and incident response.
 
 ### Technical skills
 
-- Languages - C, C++, JavaScript (Node.js), Python, Java, bash
-- Tools - Git, Docker, MySQL, MongoDB, Amazon AWS (ec2, s3, devicefarm), MS Azure
-- Web - Django, Flask, webpack, vue.js, express
-- Security - LLVM (Instrumentation), ONOS (SDN)
+- Languages - C, C++, Go, bash, Python
+- Tools - Git, Vim, OpenSSL, Amazon AWS (devicefarm), MS Azure (aks, acr, acc)
+- DevOps - Docker, Compose, Kubernetes, Jenkins
 
 ### Code
 
