@@ -39,3 +39,7 @@ validation-report.json
 
 # Folders to ignore
 node_modules
+
+# Ruby
+.bundle
+vendor
